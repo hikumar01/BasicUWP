@@ -7,7 +7,7 @@
 
 #include "App.g.h"
 
-namespace App1
+namespace BasicUWP
 {
 	/// <summary>
 	/// Provides application-specific behavior to supplement the default Application class.
