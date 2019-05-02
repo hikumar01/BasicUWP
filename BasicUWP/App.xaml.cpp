@@ -6,7 +6,7 @@
 #include "pch.h"
 #include "MainPage.xaml.h"
 
-using namespace App1;
+using namespace BasicUWP;
 
 using namespace Platform;
 using namespace Windows::ApplicationModel;
