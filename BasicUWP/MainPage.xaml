@@ -5,11 +5,21 @@
     xmlns:local="using:BasicUWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="484" Width="532">
+    mc:Ignorable="d" Height="500" Width="500">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Left" Height="475" VerticalAlignment="Top" Width="535">
-        <Button x:Name="button" Content="Hello World !!!" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Top" Background="#ff0000" />
-        <Button x:Name="button1" Content="Hello World 1 !!!" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Bottom" Background="#00ff00" />
-
-    </Grid>
+    <StackPanel Orientation="Vertical"
+                Padding="20">
+        <Button x:Name="buttonRed"
+                Content="Hello Red !!!"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Top"
+                Margin="0,0,0,20"
+                Background="#ff0000" />
+        <Button x:Name="buttonGreen"
+                Content="Hello Green !!!"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,20"
+                Background="#00ff00" />
+    </StackPanel>
 </Page>
