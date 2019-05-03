@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="BasicUWP.CustomPageAsDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BasicUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="250" Width="350">
+
+    <StackPanel Orientation="Vertical"
+                Padding="5">
+        <ContentDialog x:Name="customXamlContentDialog"
+                       Margin="0,5,0,0"
+                       PrimaryButtonText="Accept"
+                       IsPrimaryButtonEnabled="False"
+                       CloseButtonText="Cancel"
+                       Opened="customXamlContentDialog_Opened"
+                       Closed="customXamlContentDialog_Closed">
+            <ContentDialog.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock Text="Heading"/>
+                </DataTemplate>
+            </ContentDialog.TitleTemplate>
+            <StackPanel>
+                <TextBlock>
+                    <Run>Line No 1</Run><LineBreak/>
+                    <Run>Line No 2</Run>
+                </TextBlock>
+                <TextBlock x:Name="statusUpdateInDialog"
+                           Text="" />
+            </StackPanel>
+        </ContentDialog>
+    </StackPanel>
+</UserControl>

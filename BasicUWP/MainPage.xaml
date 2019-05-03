@@ -5,21 +5,66 @@
     xmlns:local="using:BasicUWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="500" Width="500">
+    mc:Ignorable="d" Height="500" Width="500" >
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="DialogSpaceContent1">
+                <StackPanel x:Name="DialogContainer1"
+                            Orientation="Vertical"
+                            Padding="40">
+                    <TextBlock x:Name="DetailsBlock"
+                               Text="MyTextBlock"
+                               Margin="0,0,0,16"
+                               Visibility="Visible"/>
+                </StackPanel>
+            </DataTemplate>
+            <StackPanel Orientation="Vertical"
+                        Padding="40"
+                        x:Name="DialogContainer2">
+                <TextBlock x:Name="DetailsBlock"
+                           Text="MyTextBlock"
+                           Margin="0,0,0,16"
+                           Visibility="Visible"/>
+            </StackPanel>
+        </ResourceDictionary>
+    </Page.Resources>
     <StackPanel Orientation="Vertical"
                 Padding="20">
-        <Button x:Name="buttonRed"
-                Content="Hello Red !!!"
+        <Button x:Name="buttonSameXaml"
+                Content="Open Same Xaml Content Dialog !!!"
                 HorizontalAlignment="Stretch"
-                VerticalAlignment="Top"
-                Margin="0,0,0,20"
-                Background="#ff0000" />
-        <Button x:Name="buttonGreen"
-                Content="Hello Green !!!"
+                Background="#ff0000"
+                Click="openSameXamlContentDialog" />
+        <ContentDialog x:Name="sameXamlContentDialog"
+                       PrimaryButtonText="Accept"
+                       IsPrimaryButtonEnabled="False"
+                       CloseButtonText="Cancel"
+                       Opened="sameXamlContentDialog_Opened"
+                       Closed="sameXamlContentDialog_Closed">
+            <ContentDialog.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock Text="Heading"/>
+                </DataTemplate>
+            </ContentDialog.TitleTemplate>
+            <StackPanel>
+                <TextBlock>
+                    <Run>Line No 1</Run><LineBreak/>
+                    <Run>Line No 2</Run>
+                </TextBlock>
+            </StackPanel>
+        </ContentDialog>
+        <Button x:Name="buttonCodeInsert"
+                Content="Open Code Xaml Content Dialog !!!"
+                Margin="0,20,0,0"
                 HorizontalAlignment="Stretch"
-                VerticalAlignment="Bottom"
-                Margin="0,0,0,20"
-                Background="#00ff00" />
+                Background="#ff0000"
+                Click="openCodeContentDialog" />
+        <Button x:Name="buttonDifferentXaml"
+                Content="Open Different Xaml Content Dialog !!! -- CRASH"
+                Margin="0,20,0,0"
+                HorizontalAlignment="Stretch"
+                Background="#ff0000"
+                Click="openDifferentXamlContentDialog" />
     </StackPanel>
 </Page>
