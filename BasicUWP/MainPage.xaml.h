@@ -17,5 +17,17 @@ namespace BasicUWP
 	public:
 		MainPage();
 
-	};
+    protected:
+        virtual void OnApplyTemplate() override;
+
+    private:
+        void openCodeContentDialog(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+        void sameXamlContentDialog_Opened(Windows::UI::Xaml::Controls::ContentDialog^ sender, Windows::UI::Xaml::Controls::ContentDialogOpenedEventArgs^ args);
+        void openSameXamlContentDialog(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+        void sameXamlContentDialog_Closed(Windows::UI::Xaml::Controls::ContentDialog^ sender, Windows::UI::Xaml::Controls::ContentDialogClosedEventArgs^ args);
+        void openDifferentXamlContentDialog(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+        void Button_Click(Platform::Object^ sender, Windows::UI::Xaml::Controls::ContentDialogButtonClickEventArgs^ e);
+
+        Windows::UI::Xaml::Controls::ContentDialog^ contentDialog;
+    };
 }
