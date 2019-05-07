@@ -30,7 +30,8 @@
         </ResourceDictionary>
     </Page.Resources>
     <StackPanel Orientation="Vertical"
-                Padding="20">
+                Padding="20"
+                x:Name="DialogContainer3">
         <Button x:Name="buttonSameXaml"
                 Content="Open Same Xaml Content Dialog !!!"
                 HorizontalAlignment="Stretch"
@@ -61,7 +62,7 @@
                 Background="#ff0000"
                 Click="openCodeContentDialog" />
         <Button x:Name="buttonDifferentXaml"
-                Content="Open Different Xaml Content Dialog !!! -- CRASH"
+                Content="Open Different Xaml Content Dialog !!!"
                 Margin="0,20,0,0"
                 HorizontalAlignment="Stretch"
                 Background="#ff0000"

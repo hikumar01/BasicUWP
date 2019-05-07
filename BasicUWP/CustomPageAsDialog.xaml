@@ -26,8 +26,7 @@
                     <Run>Line No 1</Run><LineBreak/>
                     <Run>Line No 2</Run>
                 </TextBlock>
-                <TextBlock x:Name="statusUpdateInDialog"
-                           Text="" />
+                <TextBlock x:Name="statusUpdateInDialog" Text="" />
             </StackPanel>
         </ContentDialog>
     </StackPanel>

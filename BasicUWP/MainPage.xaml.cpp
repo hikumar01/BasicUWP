@@ -64,11 +64,8 @@ void MainPage::sameXamlContentDialog_Closed(Windows::UI::Xaml::Controls::Content
 void MainPage::openDifferentXamlContentDialog(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
     CustomPageAsDialog^ pageAsDialog = ref new CustomPageAsDialog();
-    concurrency::create_task(pageAsDialog->showSustomXamlContentDialog())
-        .then([](ContentDialogResult dialogResult) {
-        static int i = 0;
-        i++;
-    });
+    DialogContainer3->Children->Append(pageAsDialog);
+    pageAsDialog->showSustomXamlContentDialog();
 }
 
 void MainPage::OnApplyTemplate()
