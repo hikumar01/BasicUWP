@@ -26,7 +26,8 @@
                     <Run>Line No 1</Run><LineBreak/>
                     <Run>Line No 2</Run>
                 </TextBlock>
-                <TextBlock x:Name="statusUpdateInDialog" Text="" />
+                <TextBlock x:Name="textContent"
+                           Text="{x:Bind TextContent, Mode=OneWay}" />
             </StackPanel>
         </ContentDialog>
     </StackPanel>

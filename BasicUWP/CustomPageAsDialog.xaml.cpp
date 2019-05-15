@@ -22,17 +22,15 @@ using namespace Windows::UI::Xaml::Navigation;
 CustomPageAsDialog::CustomPageAsDialog()
 {
     InitializeComponent();
-    statusUpdateInDialog->Text = "CustomPageAsDialog";
+    m_textContent = "mycontent";
 }
 
 void CustomPageAsDialog::customXamlContentDialog_Opened(Windows::UI::Xaml::Controls::ContentDialog^ sender, Windows::UI::Xaml::Controls::ContentDialogOpenedEventArgs^ args)
 {
-    statusUpdateInDialog->Text = "Xaml Opened";
 }
 
 void CustomPageAsDialog::customXamlContentDialog_Closed(Windows::UI::Xaml::Controls::ContentDialog^ sender, Windows::UI::Xaml::Controls::ContentDialogClosedEventArgs^ args)
 {
-    statusUpdateInDialog->Text = "Xaml Closed";
 }
 
 Windows::Foundation::IAsyncOperation<Windows::UI::Xaml::Controls::ContentDialogResult>^ CustomPageAsDialog::showSustomXamlContentDialog()
@@ -44,4 +42,14 @@ Windows::Foundation::IAsyncOperation<Windows::UI::Xaml::Controls::ContentDialogR
         i++;
     }
     return nullptr;
+}
+
+Platform::String^ CustomPageAsDialog::TextContent::get()
+{
+    return m_textContent;
+}
+
+void CustomPageAsDialog::TextContent::set(Platform::String^ value)
+{
+    m_textContent = value;
 }
