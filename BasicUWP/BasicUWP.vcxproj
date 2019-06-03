@@ -140,6 +140,9 @@
     <ClInclude Include="CustomPageAsDialog.xaml.h">
       <DependentUpon>CustomPageAsDialog.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="MyContentDialog.xaml.h">
+      <DependentUpon>MyContentDialog.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -156,6 +159,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyContentDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -182,6 +188,9 @@
     </ClCompile>
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="MyContentDialog.xaml.cpp">
+      <DependentUpon>MyContentDialog.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
