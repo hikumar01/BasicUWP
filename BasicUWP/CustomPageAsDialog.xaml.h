@@ -17,7 +17,7 @@ namespace BasicUWP
 	{
 	public:
         CustomPageAsDialog();
-        Windows::Foundation::IAsyncOperation<Windows::UI::Xaml::Controls::ContentDialogResult>^ showSustomXamlContentDialog();
+        Windows::Foundation::IAsyncOperation<Windows::UI::Xaml::Controls::ContentDialogResult>^ showCustomXamlContentDialog();
         property Platform::String^ TextContent {
             Platform::String^ get();
             void set(Platform::String^ value);

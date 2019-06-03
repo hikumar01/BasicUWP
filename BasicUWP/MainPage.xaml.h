@@ -26,6 +26,7 @@ namespace BasicUWP
         void openSameXamlContentDialog(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
         void sameXamlContentDialog_Closed(Windows::UI::Xaml::Controls::ContentDialog^ sender, Windows::UI::Xaml::Controls::ContentDialogClosedEventArgs^ args);
         void openDifferentXamlContentDialog(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+        void openMyContentDialog(Platform::Object ^ sender, Windows::UI::Xaml::RoutedEventArgs ^ e);
         void Button_Click(Platform::Object^ sender, Windows::UI::Xaml::Controls::ContentDialogButtonClickEventArgs^ e);
 
         Windows::UI::Xaml::Controls::ContentDialog^ contentDialog;

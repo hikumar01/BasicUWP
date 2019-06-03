@@ -6,6 +6,7 @@
 #include "pch.h"
 #include "MainPage.xaml.h"
 #include "CustomPageAsDialog.xaml.h"
+#include "MyContentDialog.xaml.h"
 
 using namespace BasicUWP;
 
@@ -65,7 +66,14 @@ void MainPage::openDifferentXamlContentDialog(Platform::Object^ sender, Windows:
 {
     CustomPageAsDialog^ pageAsDialog = ref new CustomPageAsDialog();
     DialogContainer3->Children->Append(pageAsDialog);
-    pageAsDialog->showSustomXamlContentDialog();
+    pageAsDialog->showCustomXamlContentDialog();
+}
+
+void MainPage::openMyContentDialog(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+    MyContentDialog^ pageAsDialog = ref new MyContentDialog();
+    //DialogContainer3->Children->Append(pageAsDialog);
+    pageAsDialog->ShowAsync();
 }
 
 void MainPage::OnApplyTemplate()

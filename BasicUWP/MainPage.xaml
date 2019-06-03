@@ -67,5 +67,11 @@
                 HorizontalAlignment="Stretch"
                 Background="#ff0000"
                 Click="openDifferentXamlContentDialog" />
+        <Button x:Name="buttonMyContentDialog"
+                Content="Open My Content Dialog !!!"
+                Margin="0,20,0,0"
+                HorizontalAlignment="Stretch"
+                Background="#ff0000"
+                Click="openMyContentDialog" />
     </StackPanel>
 </Page>

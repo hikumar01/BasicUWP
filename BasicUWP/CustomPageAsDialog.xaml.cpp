@@ -33,7 +33,7 @@ void CustomPageAsDialog::customXamlContentDialog_Closed(Windows::UI::Xaml::Contr
 {
 }
 
-Windows::Foundation::IAsyncOperation<Windows::UI::Xaml::Controls::ContentDialogResult>^ CustomPageAsDialog::showSustomXamlContentDialog()
+Windows::Foundation::IAsyncOperation<Windows::UI::Xaml::Controls::ContentDialogResult>^ CustomPageAsDialog::showCustomXamlContentDialog()
 {
     try {
         return customXamlContentDialog->ShowAsync();
